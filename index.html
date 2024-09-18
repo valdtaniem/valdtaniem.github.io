@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valdtaniem</title>
+
+    <link rel="icon" type="png|image" href="valdtaniem.png">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!-- GSAP Core -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
+
+    <!-- GSAP ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/ScrollTrigger.min.js"></script>
+
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+
+</head>
+
+<body>
+
+    <canvas id="matrixCanvas"></canvas>
+    <!-- Matrix -->
+    <script src="matrix.js"></script>
+    <script src="main.js"></script>
+
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="valdtaniem.png" style="width: 50px; height: auto;" alt="Logo">
+            <span>Valdtaniem</span>
+        </a>
+
+        <nav class="navbar">
+            <a href="#skill" style="--i:3;">Skills</a>
+            <a href="http://yixboost.nl.eu.org/yixboost" style="--i:4;" target='_blank'>Yixboost Games</a>
+        </nav>
+    </header>
+
+
+    <section id="home" class="home">
+
+        <div class="home-content" data-scroll data-scroll-speed="-5">
+            <h3 class="mu">Hello, It's me</h3>
+            <h1>Valdtaniem</h1>
+            <h3>And I'm a <span class="pro-text">
+                    <script>
+                        var typed = new Typed(".pro-text", {
+                            strings: [
+                                "Hacker",
+                                "Developer",
+                                "Programmer",
+                                "Linux User",
+                                "3D Editor"
+                            ],
+                            typeSpeed: 100,
+                            backSpeed: 100,
+                            backDelay: 1000,
+                            loop: true
+                        });
+                    </script>
+                </span></h3>
+
+            <p>
+                Lorem ipsum odor amet, consectetuer adipiscing elit. Magna magna blandit eget odio, rhoncus lacinia
+                ultricies maximus. Commodo praesent venenatis penatibus, litora curae integer. Fusce amet rhoncus
+                venenatis phasellus, inceptos sagittis.
+            </p>
+
+            <div class="home-sci">
+                <a href="https://github.com/valdtaniem" target="_blank"><i class='bx bxl-github'></i></a>
+                <a href="https://www.instagram.com/valdtaniem" target="_blank"><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.youtube.com/@valdtaniem4327" target="_blank"><i class='bx bxl-youtube'></i></a>
+            </div>
+        </div>
+
+        <div class="home-img">
+            <div class="glowing-circle">
+                <span></span>
+                <span></span>
+                <div class="image">
+                    <img src="valdtaniem.png" alt="">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="skill" class="skills">
+        <div class="skills-container">
+            <div class="tf__team_skills_bar_single fade_bottom" data-trigerid="skills" data-stagger=".25">
+                <p>HTML</p>
+                <div id="bar1" class="barfiller">
+                    <div class="tipWrap">
+                        <span class="tip"></span>
+                    </div>
+                    <span class="fill" data-percentage="100"></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6">
+            <div class="tf__team_skills_bar_single fade_bottom" data-trigerid="skills" data-stagger=".25">
+                <p>CSS</p>
+                <div id="bar2" class="barfiller">
+                    <div class="tipWrap">
+                        <span class="tip"></span>
+                    </div>
+                    <span class="fill" data-percentage="90"></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6">
+            <div class="tf__team_skills_bar_single fade_bottom" data-trigerid="skills" data-stagger=".25">
+                <p>PHP</p>
+                <div id="bar3" class="barfiller">
+                    <div class="tipWrap">
+                        <span class="tip"></span>
+                    </div>
+                    <span class="fill" data-percentage="65"></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6">
+            <div class="tf__team_skills_bar_single fade_bottom" data-trigerid="skills" data-stagger=".25">
+                <p>Javascript</p>
+                <div id="bar4" class="barfiller">
+                    <div class="tipWrap">
+                        <span class="tip"></span>
+                    </div>
+                    <span class="fill" data-percentage="50"></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6">
+            <div class="tf__team_skills_bar_single fade_bottom" data-trigerid="skills" data-stagger=".25">
+                <p>Linux</p>
+                <div id="bar5" class="barfiller">
+                    <div class="tipWrap">
+                        <span class="tip"></span>
+                    </div>
+                    <span class="fill" data-percentage="60"></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6">
+            <div class="tf__team_skills_bar_single fade_bottom" data-trigerid="skills" data-stagger=".25">
+                <p>Python</p>
+                <div id="bar6" class="barfiller">
+                    <div class="tipWrap">
+                        <span class="tip"></span>
+                    </div>
+                    <span class="fill" data-percentage="60"></span>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+</body>
+
+</html>
