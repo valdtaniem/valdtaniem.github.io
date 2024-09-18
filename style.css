@@ -282,39 +282,6 @@ canvas {
     scroll-behavior: smooth;
 }
 
-
-/* ---------------------------About----------------------- */
-
-.about {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 70px 10% 0;
-    margin-top: 10% ;
-}
-    
-.about-img img{
-    padding: auto;
-}
-
-.about-content h3{
-    font-size: 32px;
-    font-weight: 700;
-    opacity: 0;
-    animation: slideLeft 1s ease forwards;
-    animation-delay: 1s;
-}
-
-.about-content p{
-    font-size: 16px;
-    margin: 20px 0 0;
-    text-align: left;
-    opacity: 0;
-    animation: slideLeft 1s ease forwards;
-    animation-delay: 1.3s;
-}
 .skills {
     width: 100%;
     padding: 50px 10%;
