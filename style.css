@@ -29,7 +29,7 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    /* border-radius: 100px; */
+    border-radius: 100px;
 }
 
 .logo {
