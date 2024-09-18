@@ -23,13 +23,11 @@ body {
     left: 0;
     width: 100%;
     padding: 20px 10%;
-    background: transparent;
     background: linear-gradient(45deg, rgba(0, 0, 0, 0.548), green, rgba(0, 0, 0, 0.548));
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    border-radius: 100px;
 }
 
 .logo {
