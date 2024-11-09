@@ -1,173 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valdtaniem</title>
-
-    <link rel="icon" type="png|image" href="valdtaniem.png">
-    <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-    <!-- GSAP Core -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
-
-    <!-- GSAP ScrollTrigger -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/ScrollTrigger.min.js"></script>
-
-    <!-- Jquery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valdtaniem - Programmer, Enthusiast, and Maker</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="script.js" defer></script>
 </head>
-
 <body>
-
-    <canvas id="matrixCanvas"></canvas>
-    <!-- Matrix -->
-    <script src="matrix.js"></script>
-    <script src="main.js"></script>
-
-    <header class="header">
-        <a href="#" class="logo">
-            <img src="valdtaniem.png" style="width: 50px; height: auto;" alt="Logo">
-            <span>Valdtaniem</span>
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="#home">
+          <img src="assets/images/valdtaniem-no-bg.png" alt="Logo" />
         </a>
+      </div>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>  
 
-        <nav class="navbar">
-            <a href="#skill" style="--i:3;">Skills</a>
-            <a href="http://yixboost.nl.eu.org/yixboost" style="--i:4;" target='_blank'>Yixboost Games</a>
-        </nav>
-    </header>
-
-
-    <section id="home" class="home">
-
-        <div class="home-content" data-scroll data-scroll-speed="-5">
-            <h3 class="mu">Hello, It's me</h3>
-            <h1>Valdtaniem</h1>
-            <h3>And I'm a <span class="pro-text">
-                    <script>
-                        var typed = new Typed(".pro-text", {
-                            strings: [
-                                "Hacker",
-                                "Developer",
-                                "Programmer",
-                                "Linux User",
-                                "Student"
-                            ],
-                            typeSpeed: 100,
-                            backSpeed: 100,
-                            backDelay: 1000,
-                            loop: true
-                        });
-                    </script>
-                </span></h3>
-
-            <p>
-                Hi! I'm Valdtaniem, a programmer from the Netherlands. I love coding and playing with technology.
-
-                I enjoy mixing creativity with technology.I like to in CTF's but I am not verry good yet.
-                I work on many projects, including a website (yixboost.nl.eu.org) . But I love to code all sorts of things!
-            </p>
-
-            <div class="home-sci">
-                <a href="https://github.com/valdtaniem" target="_blank"><i class='bx bxl-github'></i></a>
-                <a href="https://www.instagram.com/valdtaniem" target="_blank"><i class='bx bxl-instagram'></i></a>
-                <a href="https://www.youtube.com/@valdtaniem4327" target="_blank"><i class='bx bxl-youtube'></i></a>
-            </div>
-        </div>
-
-        <div class="home-img">
-            <div class="glowing-circle">
-                <span></span>
-                <span></span>
-                <div class="image">
-                    <img src="valdtaniem.png" alt="">
-                </div>
-            </div>
-        </div>
-
+  <main>
+    <section id="hero" class="hero">
+      <div class="hero-background">
+        <img src="assets/images/planet.png" alt="Planet" class="planet">
+        <img src="assets/images/rocket.png" alt="Rocket" class="rocket">
+		      <div class="hero-content">
+            <img src="assets/images/valdtaniem-no-text.jpg" style="width: 10%;height: 10%;border-radius: 50%;">
+        <h1>Hi! I'm Valdtaniem</h1>
+        <p>Programmer, Enthusiast, and Maker</p>
+        <a href="#about" class="btn btn-primary"><i class="fa-solid fa-rocket"></i> Explore</a>
+      </div>
+      </div>
     </section>
 
-    <section id="skill" class="skills">
-        <div class="skills-container">
-            <div class="tf__team_skills_bar_single fade_bottom" data-trigerid="skills" data-stagger=".25">
-                <p>HTML</p>
-                <div id="bar1" class="barfiller">
-                    <div class="tipWrap">
-                        <span class="tip"></span>
-                    </div>
-                    <span class="fill" data-percentage="100"></span>
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-6 col-lg-6">
-            <div class="tf__team_skills_bar_single fade_bottom" data-trigerid="skills" data-stagger=".25">
-                <p>CSS</p>
-                <div id="bar2" class="barfiller">
-                    <div class="tipWrap">
-                        <span class="tip"></span>
-                    </div>
-                    <span class="fill" data-percentage="54"></span>
-                </div>
-            </div>
-        </div>
-            
-        <div class="col-xl-6 col-lg-6">
-            <div class="tf__team_skills_bar_single fade_bottom" data-trigerid="skills" data-stagger=".25">
-                <p>PHP</p>
-                <div id="bar3" class="barfiller">
-                    <div class="tipWrap">
-                        <span class="tip"></span>
-                    </div>
-                    <span class="fill" data-percentage="69"></span>
-                </div>
-            </div>
-        </div>
-            
-        <div class="col-xl-6 col-lg-6">
-            <div class="tf__team_skills_bar_single fade_bottom" data-trigerid="skills" data-stagger=".25">
-                <p>Javascript</p>
-                <div id="bar4" class="barfiller">
-                    <div class="tipWrap">
-                        <span class="tip"></span>
-                    </div>
-                    <span class="fill" data-percentage="59"></span>
-                </div>
-            </div>
-        </div>
-            
-        <div class="col-xl-6 col-lg-6">
-            <div class="tf__team_skills_bar_single fade_bottom" data-trigerid="skills" data-stagger=".25">
-                <p>Linux</p>
-                <div id="bar5" class="barfiller">
-                    <div class="tipWrap">
-                        <span class="tip"></span>
-                    </div>
-                    <span class="fill" data-percentage="85"></span>
-                </div>
-            </div>
-        </div>
-            
-        <div class="col-xl-6 col-lg-6">
-            <div class="tf__team_skills_bar_single fade_bottom" data-trigerid="skills" data-stagger=".25">
-                <p>Python</p>
-                <div id="bar6" class="barfiller">
-                    <div class="tipWrap">
-                        <span class="tip"></span>
-                    </div>
-                    <span class="fill" data-percentage="78"></span>
-                </div>
-            </div>
-        </div>
-        
+    <section id="about" class="about">
+      <div class="about-content">
+        <img src="assets/images/valdtaniem-white-transparant.png" style="width: 10%;height: 10%;">
+        <h2>About Me</h2>
+        <p>Hi! I'm Valdtaniem, a programmer from the Netherlands. I love coding and playing with technology. I enjoy mixing creativity with technology.I like to in CTF's but I am not verry good yet. I work on many projects, including a website (yixboost.nl.eu.org) . But I love to code all sorts of things! </p>
+        <a href="#projects" class="btn btn-secondary"><i class="fa-solid fa-arrow-down"></i> Learn More</a>
+      </div>
+      <div class="about-background">
+        <img src="assets/images/about-bg.jpg" alt="Header BG" class="constellation">
+      </div>
     </section>
 
+    <section id="projects" class="projects">
+      <div class="projects-content">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+          <div class="project-item">
+            <img src="https://yixboost.github.io/assets/images/yixboost-games-mockup.jpg" alt="yixboost" class="project-image">
+            <h3>Yixboost Games</h3>
+            <p>Step into worlds of endless possibility. Play FREE Games online, all games, any game.</p>
+            <a href="https://yixboost.github.io" target="_blank" class="btn btn-primary">Visit yixboost</a>
+          </div>
+          <div class="project-item">
+            <img src="assets/images/ctf.jpg" alt="CTF" class="project-image">
+            <h3>CTFs</h3>
+            <p>I'm an avid CTF participant, always seeking new challenges and honing my security skills.</p>
+            <a href="#" target="_blank" class="btn btn-primary">Explore CTFs</a>
+          </div>
+          <div class="project-item">
+            <img src="assets/images/ableton.jpg" alt="Music" class="project-image">
+            <h3>Music Remixes</h3>
+            <p>Remixing and producing music is one of my hobbies. I love exploring different genres.</p>
+            <a href="https://www.youtube.com/@valdtaniem4327" target="_blank" class="btn btn-primary">Listen Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
+<section id="skills" class="skills">
+  <div class="skills-content">
+    <h2>My Skills</h2>
+    <div class="skill-grid">
+      <div class="skill-item">
+        <i class="skill-icon fab fa-php"></i>
+        <h3>PHP</h3>
+        <div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div>
+      </div>
+      <div class="skill-item">
+        <i class="skill-icon fas fa-code"></i>
+        <h3>C++</h3>
+        <div class="skill-bar"><div class="skill-level" style="width: 70%;"></div></div>
+      </div>
+      <div class="skill-item">
+        <i class="skill-icon fab fa-microsoft"></i>
+        <h3>C#</h3>
+        <div class="skill-bar"><div class="skill-level" style="width: 75%;"></div></div>
+      </div>
+      <div class="skill-item">
+        <i class="skill-icon fab fa-js-square"></i>
+        <h3>JavaScript</h3>
+        <div class="skill-bar"><div class="skill-level" style="width: 85%;"></div></div>
+      </div>
+      <div class="skill-item">
+        <i class="skill-icon fab fa-python"></i>
+        <h3>Python</h3>
+        <div class="skill-bar"><div class="skill-level" style="width: 90%;"></div></div>
+      </div>
+      <div class="skill-item">
+        <i class="skill-icon fab fa-html5"></i>
+        <h3>HTML</h3>
+        <div class="skill-bar"><div class="skill-level" style="width: 95%;"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <section id="contact" class="contact">
+      <div class="contact-content">
+        <img src="assets/images/valdtaniem-white-transparant.png" style="width: 10%;height: 10%;">
+        <h2>Get in Touch</h2>
+        <p>You can find me on:</p>
+        <div class="social-links">
+          <a href="https://www.instagram.com/valdtaniem" target="_blank" class="social-link">
+            <i class="fab fa-instagram"></i>
+            <span>Instagram</span>
+          </a>
+          <a href="https://www.youtube.com/@valdtaniem4327" target="_blank" class="social-link">
+            <i class="fab fa-youtube"></i>
+            <span>YouTube</span>
+          </a>
+          <a href="https://github.com/valdtaniem" target="_blank" class="social-link">
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
+        </div>
+      </div>
+      <div class="contact-background">
+        <img src="assets/images/asteroids.jpg" alt="Asteroids" class="asteroids">
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Valdtaniem. All rights reserved.</p>
+  </footer>
 </body>
-
 </html>
