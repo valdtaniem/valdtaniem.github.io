@@ -1,4 +1,4 @@
-<!DOCTYPE html>  
+<!DOCTYPE html>   <!-- colors #001122 and #7815a9 -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -16,7 +16,6 @@
           <img src="assets/images/valdtaniem-no-bg.png" alt="Logo" />
         </a>
       </div>
-      <!-- Hamburger button (visible on mobile only) -->
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span></span>
         <span></span>
@@ -149,7 +148,6 @@
     <p>&copy; 2026 Valdtaniem. All rights reserved.</p>
   </footer>
 
-  <!-- Mobile nav toggle script -->
   <script>
     const toggle = document.querySelector('.nav-toggle');
     const navUl = document.querySelector('nav ul');
@@ -159,8 +157,6 @@
       toggle.classList.toggle('open', isOpen);
       toggle.setAttribute('aria-expanded', isOpen);
     });
-
-    // Close menu when a nav link is clicked
     navUl.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         navUl.classList.remove('open');
