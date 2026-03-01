@@ -202,11 +202,11 @@ nav li a:hover {
 }
 
 .rocket {
-  position: absolute !important;
+  position: fixed !important;
   width: 60px;
   height: 60px;
   transition: transform 0.2s ease-out;
-  z-index: 2;
+  z-index: 9999;
 }
 
 @keyframes planetRotate {
