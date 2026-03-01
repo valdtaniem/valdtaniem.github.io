@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html>  
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -16,6 +16,12 @@
           <img src="assets/images/valdtaniem-no-bg.png" alt="Logo" />
         </a>
       </div>
+      <!-- Hamburger button (visible on mobile only) -->
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <ul>
         <li><a href="#hero">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -31,24 +37,24 @@
       <div class="hero-background">
         <img src="assets/images/planet.png" alt="Planet" class="planet">
         <img id="rocket" src="assets/images/rocket.png" alt="Rocket" class="rocket">
-		      <div class="hero-content">
-            <img src="assets/images/valdtaniem-no-text.jpg" style="width: 10%;height: 10%;border-radius: 50%;" id="ProfilePicture">
-        <h1>Hi! I'm Valdtaniem</h1>
-        <p>Programmer, Enthusiast, and Maker</p>
-        <a href="#about" class="btn btn-primary"><i class="fa-solid fa-rocket"></i> Explore</a>
-      </div>
+        <div class="hero-content">
+          <img src="assets/images/valdtaniem-no-text.jpg" style="width: 10%; height: 10%; border-radius: 50%;" id="ProfilePicture">
+          <h1>Hi! I'm Valdtaniem</h1>
+          <p>Programmer, Enthusiast, and Maker</p>
+          <a href="#about" class="btn btn-primary"><i class="fa-solid fa-rocket"></i> Explore</a>
+        </div>
       </div>
     </section>
 
     <section id="about" class="about">
       <div class="about-content">
-        <img src="assets/images/valdtaniem-white-transparant.png" style="width: 10%;height: 10%;">
+        <img src="assets/images/valdtaniem-white-transparant.png" style="width: 10%; height: 10%;">
         <h2>About Me</h2>
-        <p>Hi! I'm Valdtaniem, a programmer from the Netherlands. I love coding and hacking (;  I enjoy mixing creativity with technology.I like to in CTF's, but I am not amazing yet. I work on many projects, including some websites (yixboost.dev, yixboost.eu). But I love to code all sorts of things! </p>
+        <p>Hi! I'm Valdtaniem, a programmer from the Netherlands. I love coding and hacking (;  I enjoy mixing creativity with technology. I like to in CTF's, but I am not amazing yet. I work on many projects, including some websites (yixboost.dev, yixboost.eu). But I love to code all sorts of things!</p>
         <a href="#projects" class="btn btn-secondary"><i class="fa-solid fa-arrow-down"></i> Learn More</a>
       </div>
       <div class="about-background">
-        <img src="assets/images/about-bg.jpg" alt="Header BG" class="constellation">
+        <img src="assets/images/stacked-peaks-bg.png" alt="Header BG" class="constellation">
       </div>
     </section>
 
@@ -78,48 +84,47 @@
       </div>
     </section>
 
-<section id="skills" class="skills">
-  <div class="skills-content">
-    <h2>My Skills</h2>
-    <div class="skill-grid">
-      <div class="skill-item">
-        <i class="skill-icon fab fa-php"></i>
-        <h3>PHP</h3>
-        <div class="skill-bar"><div class="skill-level" style="width: 54%;"></div></div>
+    <section id="skills" class="skills">
+      <div class="skills-content">
+        <h2>My Skills</h2>
+        <div class="skill-grid">
+          <div class="skill-item">
+            <i class="skill-icon fab fa-php"></i>
+            <h3>PHP</h3>
+            <div class="skill-bar"><div class="skill-level" style="width: 54%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <i class="skill-icon fas fa-code"></i>
+            <h3>C++</h3>
+            <div class="skill-bar"><div class="skill-level" style="width: 40%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <i class="skill-icon fab fa-microsoft"></i>
+            <h3>C#</h3>
+            <div class="skill-bar"><div class="skill-level" style="width: 75%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <i class="skill-icon fab fa-js-square"></i>
+            <h3>JavaScript</h3>
+            <div class="skill-bar"><div class="skill-level" style="width: 70%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <i class="skill-icon fab fa-python"></i>
+            <h3>Python</h3>
+            <div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <i class="skill-icon fab fa-c"></i>
+            <h3>C</h3>
+            <div class="skill-bar"><div class="skill-level" style="width: 30%;"></div></div>
+          </div>
+        </div>
       </div>
-      <div class="skill-item">
-        <i class="skill-icon fas fa-code"></i>
-        <h3>C++</h3>
-        <div class="skill-bar"><div class="skill-level" style="width: 40%;"></div></div>
-      </div>
-      <div class="skill-item">
-        <i class="skill-icon fab fa-microsoft"></i>
-        <h3>C#</h3>
-        <div class="skill-bar"><div class="skill-level" style="width: 75%;"></div></div>
-      </div>
-      <div class="skill-item">
-        <i class="skill-icon fab fa-js-square"></i>
-        <h3>JavaScript</h3>
-        <div class="skill-bar"><div class="skill-level" style="width: 70%;"></div></div>
-      </div>
-      <div class="skill-item">
-        <i class="skill-icon fab fa-python"></i>
-        <h3>Python</h3>
-        <div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div>
-      </div>
-      <div class="skill-item">
-        <i class="skill-icon fab fa-c"></i>
-        <h3>C</h3>
-        <div class="skill-bar"><div class="skill-level" style="width: 30%;"></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
+    </section>
 
     <section id="contact" class="contact">
       <div class="contact-content">
-        <img src="assets/images/valdtaniem-white-transparant.png" style="width: 10%;height: 10%;">
+        <img src="assets/images/valdtaniem-white-transparant.png" style="width: 10%; height: 10%;">
         <h2>Get in Touch</h2>
         <p>You can find me on:</p>
         <div class="social-links">
@@ -137,14 +142,32 @@
           </a>
         </div>
       </div>
-      <div class="contact-background">
-        <img src="assets/images/asteroids.jpg" alt="Asteroids" class="asteroids">
-      </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Valdtaniem. All rights reserved.</p>
+    <p>&copy; 2026 Valdtaniem. All rights reserved.</p>
   </footer>
+
+  <!-- Mobile nav toggle script -->
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const navUl = document.querySelector('nav ul');
+
+    toggle.addEventListener('click', () => {
+      const isOpen = navUl.classList.toggle('open');
+      toggle.classList.toggle('open', isOpen);
+      toggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close menu when a nav link is clicked
+    navUl.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navUl.classList.remove('open');
+        toggle.classList.remove('open');
+        toggle.setAttribute('aria-expanded', false);
+      });
+    });
+  </script>
 </body>
 </html>
