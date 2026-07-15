@@ -1,3 +1,12 @@
+/* ==========================================================
+   Design tokens
+   Note: the original header comment declared brand colors as
+   #001122 and #7815a9, but #7815a9 was never actually used
+   anywhere — the real accent color in use was #9370db / #9b59b6.
+   Keeping the CSS in sync with whichever is actually the intended
+   brand color; swap --color-accent below if you want the deeper
+   #7815a9 purple instead.
+   ========================================================== */
 :root {
   --color-bg: #0f0f0f;
   --color-navy: #001122;
@@ -65,6 +74,9 @@ a:hover {
   color: #fff;
 }
 
+/* Reusable image utility classes (replaces the old inline
+   width:10%/height:10% sizing, which had no upper bound and could
+   balloon or shrink unpredictably across screen sizes) */
 .profile-picture {
   width: 120px;
   height: 120px;
@@ -194,7 +206,7 @@ nav li a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(assets/images/stacked-waves-bg.svg);
+  background-image: url(/assets/images/stacked-waves-bg.svg);
   background-size: cover;
   z-index: -1;
 }
@@ -237,6 +249,14 @@ nav li a:hover {
   height: 60px;
   transition: transform 0.2s ease-out;
   z-index: 9999;
+}
+
+/* Toggled on click in script.js. Uses filter instead of transform/scale
+   since the JS animation loop overwrites rocket.style.transform every
+   frame — an inline style set by JS would silently beat any transform
+   set here, the same specificity issue as the skill bars earlier. */
+.rocket.boost {
+  filter: drop-shadow(0 0 10px var(--color-accent-bright)) drop-shadow(0 0 20px var(--color-accent));
 }
 
 @keyframes planetRotate {
@@ -284,22 +304,21 @@ nav li a:hover {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background-image: url('assets/images/stacked-peaks-bg.png');
+  background-image: url('/assets/images/stacked-peaks-bg.png');
   background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 0.25;
-  animation: constellationScroll 60s linear infinite;
-}
-
-@keyframes constellationScroll {
-  0% { background-position: 0 0; }
-  100% { background-position: -1000px -1000px; }
+  /* The original rendered this as a plain <img> with no object-fit set,
+     which stretches non-uniformly to exactly fill its box rather than
+     uniformly scaling + cropping. That matters here because it changes
+     how much of the image's color gradient is visible: cover crops to
+     only part of the gradient's range, while a 100% 100% stretch spreads
+     the full gradient across the box, same as the original did. */
+  background-size: 100% 100%;
 }
 
 /* Projects Section */
 .projects {
   padding: 100px 0;
-  background-image: url(assets/images/blob-scatter-bg.svg);
+  background-image: url(/assets/images/blob-scatter-bg.svg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -318,6 +337,10 @@ nav li a:hover {
 
 .project-grid {
   display: grid;
+  /* Hardcoded to 4 since there are 4 project cards. auto-fit with
+     minmax(260px,1fr) was tried here, but at this section's ~1160px
+     content width, 4 columns need exactly 1160px (260*4 + 40*3 gaps) —
+     close enough to the edge that the browser was rounding down to 3. */
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 40px;
 }
@@ -349,7 +372,7 @@ nav li a:hover {
 
 /* Skills Section */
 .skills {
-  background-image: url(assets/images/layered-peaks-bg.svg);
+  background-image: url(/assets/images/layered-peaks-bg.svg);
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 100px;
@@ -400,6 +423,12 @@ nav li a:hover {
   margin-top: 15px;
 }
 
+/* Previously: width was set inline (style="width: 54%") AND this class
+   tried to override it to 0/100% on hover. Inline styles always win over
+   class selectors — including :hover ones — so the hover-grow effect
+   never actually ran. Now the level is passed in as a custom property
+   (--level) and read here, so both the base value and the hover state
+   are driven by real CSS and actually work. */
 .skill-level {
   height: 100%;
   background-color: var(--color-accent-bright);
@@ -407,9 +436,13 @@ nav li a:hover {
   transition: width 0.4s ease;
 }
 
-.skill-item:hover .skill-level {
-  width: 100%;
-}
+/* Removed: .skill-item:hover .skill-level { width: 100%; } — this was
+   already present in the very first version of this file, but never
+   visibly ran until the inline-style specificity bug above was fixed.
+   Once it actually worked, it just overwrote every bar's real
+   percentage with 100% on hover, which hides the data the bars exist
+   to show. The card lift/glow below still gives hover feedback without
+   that. */
 
 .skill-item:hover {
   transform: scale(1.05);
@@ -428,7 +461,7 @@ nav li a:hover {
   align-items: center;
   position: relative;
   overflow: hidden;
-  background-image: url(assets/images/polygon-scatter-bg.svg);
+  background-image: url(/assets/images/polygon-scatter-bg.svg);
   background-repeat: no-repeat;
   background-size: cover;
 }
