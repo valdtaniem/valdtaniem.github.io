@@ -1,3 +1,18 @@
+:root {
+  --color-bg: #0f0f0f;
+  --color-navy: #001122;
+  --color-text: #f0f0f0;
+  --color-text-muted: #b5b5b5;
+  --color-text-muted-hover: #d9d9d9;
+  --color-accent: #9370db;
+  --color-accent-dark: #6b5b95;
+  --color-accent-hover: #5b4d7e;
+  --color-accent-hover-alt: #8957d3;
+  --color-accent-bright: #9b59b6;
+  --color-card-bg: #1a1a1a;
+  --color-border: #333;
+}
+
 /* General Styles */
 html {
   scroll-behavior: smooth;
@@ -7,18 +22,18 @@ body {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #0f0f0f;
-  color: #f0f0f0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
   scroll-behavior: smooth;
 }
 
 a {
-  color: #b5b5b5;
+  color: var(--color-text-muted);
   text-decoration: none;
 }
 
 a:hover {
-  color: #d9d9d9;
+  color: var(--color-text-muted-hover);
 }
 
 .btn {
@@ -31,23 +46,38 @@ a:hover {
 }
 
 .btn-primary {
-  background-image: linear-gradient(to right, #6b5b95, #9370db);
+  background-image: linear-gradient(to right, var(--color-accent-dark), var(--color-accent));
   color: #fff;
 }
 
 .btn-primary:hover {
-  background-image: linear-gradient(to right, #5b4d7e, #8957d3);
+  background-image: linear-gradient(to right, var(--color-accent-hover), var(--color-accent-hover-alt));
 }
 
 .btn-secondary {
   background-color: transparent;
-  border: 2px solid #9370db;
-  color: #9370db;
+  border: 2px solid var(--color-accent);
+  color: var(--color-accent);
 }
 
 .btn-secondary:hover {
-  background-color: #9370db;
+  background-color: var(--color-accent);
   color: #fff;
+}
+
+.profile-picture {
+  width: 120px;
+  height: 120px;
+  max-width: 30vw;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.section-icon {
+  width: 60px;
+  height: 60px;
+  max-width: 20vw;
+  object-fit: contain;
 }
 
 /* Header and Navigation */
@@ -95,7 +125,7 @@ nav li a {
 }
 
 nav li a:hover {
-  color: #9b59b6;
+  color: var(--color-accent-bright);
 }
 
 /* Hamburger button — hidden on desktop */
@@ -164,7 +194,7 @@ nav li a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(/assets/images/stacked-waves-bg.svg);
+  background-image: url(assets/images/stacked-waves-bg.svg);
   background-size: cover;
   z-index: -1;
 }
@@ -210,8 +240,8 @@ nav li a:hover {
 }
 
 @keyframes planetRotate {
-  0% { transform: rotate(0deg) translateX(200px); }
-  100% { transform: rotate(360deg) translateX(200px); }
+  0% { transform: translate(-50%, -50%) rotate(0deg) translateX(200px); }
+  100% { transform: translate(-50%, -50%) rotate(360deg) translateX(200px); }
 }
 
 @keyframes rocketFly {
@@ -254,15 +284,10 @@ nav li a:hover {
   width: 100%;
   height: 100%;
   overflow: hidden;
-}
-
-.constellation {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: url('constellation.png');
+  background-image: url('assets/images/stacked-peaks-bg.png');
   background-repeat: no-repeat;
   background-size: cover;
+  opacity: 0.25;
   animation: constellationScroll 60s linear infinite;
 }
 
@@ -274,7 +299,7 @@ nav li a:hover {
 /* Projects Section */
 .projects {
   padding: 100px 0;
-  background-image: url(/assets/images/blob-scatter-bg.svg);
+  background-image: url(assets/images/blob-scatter-bg.svg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -293,12 +318,12 @@ nav li a:hover {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   grid-gap: 40px;
 }
 
 .project-item {
-  background-color: #1a1a1a;
+  background-color: var(--color-card-bg);
   border-radius: 10px;
   padding: 30px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -324,7 +349,7 @@ nav li a:hover {
 
 /* Skills Section */
 .skills {
-  background-image: url(/assets/images/layered-peaks-bg.svg);
+  background-image: url(assets/images/layered-peaks-bg.svg);
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 100px;
@@ -350,7 +375,7 @@ nav li a:hover {
 }
 
 .skill-item {
-  background-color: #1a1a1a;
+  background-color: var(--color-card-bg);
   border-radius: 10px;
   padding: 30px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -368,7 +393,7 @@ nav li a:hover {
 }
 
 .skill-bar {
-  background-color: #333;
+  background-color: var(--color-border);
   border-radius: 5px;
   overflow: hidden;
   height: 10px;
@@ -377,9 +402,13 @@ nav li a:hover {
 
 .skill-level {
   height: 100%;
-  background-color: #9b59b6;
-  width: 0;
+  background-color: var(--color-accent-bright);
+  width: var(--level, 0%);
   transition: width 0.4s ease;
+}
+
+.skill-item:hover .skill-level {
+  width: 100%;
 }
 
 .skill-item:hover {
@@ -388,11 +417,7 @@ nav li a:hover {
 }
 
 .skill-item:hover .skill-icon {
-  color: #9b59b6;
-}
-
-.skill-item:hover .skill-level {
-  width: 100%;
+  color: var(--color-accent-bright);
 }
 
 /* Contact Section */
@@ -403,7 +428,7 @@ nav li a:hover {
   align-items: center;
   position: relative;
   overflow: hidden;
-  background-image: url(/assets/images/polygon-scatter-bg.svg);
+  background-image: url(assets/images/polygon-scatter-bg.svg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -437,12 +462,12 @@ nav li a:hover {
   display: flex;
   align-items: center;
   margin: 0 20px;
-  color: #b5b5b5;
+  color: var(--color-text-muted);
   transition: color 0.3s ease;
 }
 
 .social-link:hover {
-  color: #d9d9d9;
+  color: var(--color-text-muted-hover);
 }
 
 .social-link i {
@@ -452,15 +477,11 @@ nav li a:hover {
 
 /* Footer */
 footer {
-  background-color: #001122;
+  background-color: var(--color-navy);
   padding: 20px 0;
   text-align: center;
   font-size: 14px;
 }
-
-/* =====================
-   RESPONSIVE / MOBILE
-   ===================== */
 
 /* Tablet: 768px and below */
 @media (max-width: 768px) {

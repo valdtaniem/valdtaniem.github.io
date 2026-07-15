@@ -1,19 +1,40 @@
-<!DOCTYPE html>   <!-- colors #001122 and #7815a9 -->
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Valdtaniem - Programmer, Enthusiast, and Maker</title>
+  <title>Valdtaniem - Hacker and maker</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Valdtaniem — Hacker and maker from the Netherlands. Homelab self-hoster and CTF player.">
+  <link rel="canonical" href="https://valdtaniem.yixboost.dev/">
+
+  <!-- Open Graph / social previews -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Valdtaniem - Hacker, and Maker">
+  <meta property="og:description" content="Hacker and maker from the Netherlands. Homelab self-hoster and CTF player.">
+  <meta property="og:image" content="https://valdtaniem.yixboost.dev/assets/images/valdtaniem-no-bg.png">
+  <meta property="og:url" content="https://valdtaniem.yixboost.dev/">
+  <meta name="twitter:card" content="summary">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/valdtaniem-no-bg.png">
+
+  <!-- Fonts: previously referenced Montserrat in CSS with no font actually loaded -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <script src="assets/js/script.js" defer></script>
 </head>
 <body>
   <header>
-    <nav>
+    <nav aria-label="Primary">
       <div class="logo">
         <a href="#hero">
-          <img src="assets/images/valdtaniem-no-bg.png" alt="Logo" />
+          <img src="assets/images/valdtaniem-no-bg.png" alt="Valdtaniem logo" width="50" height="50">
         </a>
       </div>
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
@@ -29,32 +50,30 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-  </header>  
+  </header>
 
   <main>
     <section id="hero" class="hero">
       <div class="hero-background">
-        <img src="assets/images/planet.png" alt="Planet" class="planet">
-        <img id="rocket" src="assets/images/rocket.png" alt="Rocket" class="rocket">
+        <img src="assets/images/planet.png" alt="" class="planet" width="200" height="200">
+        <img id="rocket" src="assets/images/rocket.png" alt="" class="rocket" width="60" height="60">
         <div class="hero-content">
-          <img src="assets/images/valdtaniem-no-text.jpg" style="width: 10%; height: 10%; border-radius: 50%;" id="ProfilePicture">
+          <img src="assets/images/valdtaniem-no-text.jpg" class="profile-picture" alt="Valdtaniem" width="120" height="120">
           <h1>Hi! I'm Valdtaniem</h1>
-          <p>Programmer, Hacker, and Maker</p>
-          <a href="#about" class="btn btn-primary"><i class="fa-solid fa-rocket"></i> Explore</a>
+          <p>Hacker and Maker</p>
+          <a href="#about" class="btn btn-primary"><i class="fa-solid fa-rocket" aria-hidden="true"></i> Explore</a>
         </div>
       </div>
     </section>
 
     <section id="about" class="about">
       <div class="about-content">
-        <img src="assets/images/valdtaniem-white-transparant.png" style="width: 10%; height: 10%;">
+        <img src="assets/images/valdtaniem-white-transparant.png" class="section-icon" alt="" width="60" height="60">
         <h2>About Me</h2>
-        <p>Hi! I'm Valdtaniem, a programmer from the Netherlands. I love coding and hacking (;  I enjoy mixing creativity with technology. I like to in CTF's. I work on many projects, including some websites (yixboost.dev, yixboost.eu). But I love to code and break all sorts of things!</p>
-        <a href="#projects" class="btn btn-secondary"><i class="fa-solid fa-arrow-down"></i> Learn More</a>
+        <p>Hi! I'm Valdtaniem, a maker/hacker from the Netherlands. I love engineering, coding and hacking. I enjoy mixing creativity with technology. Competing in CTFs is something I realy enjoy. I work on a bunch of projects, including some websites (yixboost.dev, yixboost.eu). But mostly I just love to make and break all sorts of things!</p>
+        <a href="#projects" class="btn btn-secondary"><i class="fa-solid fa-arrow-down" aria-hidden="true"></i> Learn More</a>
       </div>
-      <div class="about-background">
-        <img src="assets/images/stacked-peaks-bg.png" alt="Header BG" class="constellation">
-      </div>
+      <div class="about-background" aria-hidden="true"></div>
     </section>
 
     <section id="projects" class="projects">
@@ -62,22 +81,28 @@
         <h2>My Projects</h2>
         <div class="project-grid">
           <div class="project-item">
-            <img src="https://yixboost.dev/assets/images/games-banner.png" alt="yixboost" class="project-image">
+            <img src="assets/images/yixboost-games.png" alt="Yixboost project banner" class="project-image" loading="lazy">
             <h3>Yixboost</h3>
             <p>Visit the website of Team Yixboost NL, consisting of Jonasvanleeuwen19 and me.</p>
-            <a href="https://yixboost.dev" target="_blank" class="btn btn-primary">Visit Yixboost</a>
+            <a href="https://yixboost.dev" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Visit Yixboost</a>
           </div>
           <div class="project-item">
-            <img src="assets/images/ctf.png" alt="CTF" class="project-image">
+            <img src="assets/images/ctf.png" alt="CTF" class="project-image" loading="lazy">
             <h3>CTFs</h3>
-            <p>I like playing CTF's, although I'm not very good. But I'm trying to improve.</p>
-            <a href="https://ctf.yixboost.dev" target="_blank" class="btn btn-primary">Explore CTFs</a>
+            <p>I realy like playing CTFs, I took part in the Cyberbootcamp (challengethecyber.nl/news) 2025 and 2026.</p>
+            <a href="https://ctfteam.yixboost.dev" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Explore CTFs</a>
           </div>
           <div class="project-item">
-            <img src="assets/images/ableton.jpg" alt="Music" class="project-image">
+            <img src="assets/images/blog.png" alt="Blog" class="project-image" loading="lazy">
+            <h3>BLOG</h3>
+            <p>I have a blog together with Jonasvanleeuwen19. I try to update it whenever i have a cool new project.</p>
+            <a href="https://blog.yixboost.dev" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Read the blog!</a>
+          </div>
+          <div class="project-item">
+            <img src="assets/images/ableton.jpg" alt="Music production" class="project-image" loading="lazy">
             <h3>Music Remixes</h3>
-            <p>Making silly remixes is one of my hobbies. I love making a decent song into a complete mess (:</p>
-            <a href="https://remix.yixboost.dev" target="_blank" class="btn btn-primary">Listen here</a>
+            <p>Making silly remixes is one of my hobbies. I love turning a decent song into a complete mess (:<</p>
+            <a href="https://remix.yixboost.dev" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Listen here</a>
           </div>
         </div>
       </div>
@@ -88,34 +113,34 @@
         <h2>My Skills</h2>
         <div class="skill-grid">
           <div class="skill-item">
-            <i class="skill-icon fab fa-php"></i>
+            <i class="skill-icon fab fa-php" aria-hidden="true"></i>
             <h3>PHP</h3>
-            <div class="skill-bar"><div class="skill-level" style="width: 54%;"></div></div>
+            <div class="skill-bar"><div class="skill-level" style="--level: 54%"></div></div>
           </div>
           <div class="skill-item">
-            <i class="skill-icon fas fa-code"></i>
+            <i class="skill-icon fas fa-code" aria-hidden="true"></i>
             <h3>C++</h3>
-            <div class="skill-bar"><div class="skill-level" style="width: 40%;"></div></div>
+            <div class="skill-bar"><div class="skill-level" style="--level: 40%"></div></div>
           </div>
           <div class="skill-item">
-            <i class="skill-icon fab fa-microsoft"></i>
+            <i class="skill-icon fab fa-microsoft" aria-hidden="true"></i>
             <h3>C#</h3>
-            <div class="skill-bar"><div class="skill-level" style="width: 75%;"></div></div>
+            <div class="skill-bar"><div class="skill-level" style="--level: 75%"></div></div>
           </div>
           <div class="skill-item">
-            <i class="skill-icon fab fa-js-square"></i>
+            <i class="skill-icon fab fa-js-square" aria-hidden="true"></i>
             <h3>JavaScript</h3>
-            <div class="skill-bar"><div class="skill-level" style="width: 70%;"></div></div>
+            <div class="skill-bar"><div class="skill-level" style="--level: 70%"></div></div>
           </div>
           <div class="skill-item">
-            <i class="skill-icon fab fa-python"></i>
+            <i class="skill-icon fab fa-python" aria-hidden="true"></i>
             <h3>Python</h3>
-            <div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div>
+            <div class="skill-bar"><div class="skill-level" style="--level: 80%"></div></div>
           </div>
           <div class="skill-item">
-            <i class="skill-icon fab fa-c"></i>
+            <i class="skill-icon fab fa-c" aria-hidden="true"></i>
             <h3>C</h3>
-            <div class="skill-bar"><div class="skill-level" style="width: 30%;"></div></div>
+            <div class="skill-bar"><div class="skill-level" style="--level: 30%"></div></div>
           </div>
         </div>
       </div>
@@ -123,21 +148,29 @@
 
     <section id="contact" class="contact">
       <div class="contact-content">
-        <img src="assets/images/valdtaniem-white-transparant.png" style="width: 10%; height: 10%;">
+        <img src="assets/images/valdtaniem-white-transparant.png" class="section-icon" alt="" width="60" height="60">
         <h2>Get in Touch</h2>
         <p>You can find me on:</p>
         <div class="social-links">
-          <a href="https://www.instagram.com/valdtaniem" target="_blank" class="social-link">
-            <i class="fab fa-instagram"></i>
+          <a href="https://www.instagram.com/valdtaniem" target="_blank" rel="noopener noreferrer" class="social-link">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
             <span>Instagram</span>
           </a>
-          <a href="https://www.youtube.com/@valdtaniem4327" target="_blank" class="social-link">
-            <i class="fab fa-youtube"></i>
+          <a href="https://www.youtube.com/@valdtaniem4327" target="_blank" rel="noopener noreferrer" class="social-link">
+            <i class="fab fa-youtube" aria-hidden="true"></i>
             <span>YouTube</span>
           </a>
-          <a href="https://github.com/valdtaniem" target="_blank" class="social-link">
-            <i class="fab fa-github"></i>
+          <a href="https://github.com/valdtaniem" target="_blank" rel="noopener noreferrer" class="social-link">
+            <i class="fab fa-github" aria-hidden="true"></i>
             <span>GitHub</span>
+          </a>
+          <a href="https://blog.yixboost.dev" target="_blank" rel="noopener noreferrer" class="social-link">
+            <i class="fa-solid fa-blog" aria-hidden="true"></i>
+            <span>Blog</span>
+          </a>
+          <a href="https://git.tuxworld.nl" target="_blank" rel="noopener noreferrer" class="social-link">
+            <i class="fa-solid fa-code-branch" aria-hidden="true"></i>
+            <span>Git</span>
           </a>
         </div>
       </div>
@@ -145,25 +178,7 @@
   </main>
 
   <footer>
-    <p>&copy; 2026 Valdtaniem. All rights reserved.</p>
+    <p>&copy; <span id="year">2026</span> Valdtaniem. All rights reserved.</p>
   </footer>
-
-  <script>
-    const toggle = document.querySelector('.nav-toggle');
-    const navUl = document.querySelector('nav ul');
-
-    toggle.addEventListener('click', () => {
-      const isOpen = navUl.classList.toggle('open');
-      toggle.classList.toggle('open', isOpen);
-      toggle.setAttribute('aria-expanded', isOpen);
-    });
-    navUl.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navUl.classList.remove('open');
-        toggle.classList.remove('open');
-        toggle.setAttribute('aria-expanded', false);
-      });
-    });
-  </script>
 </body>
 </html>
