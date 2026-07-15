@@ -318,7 +318,7 @@ nav li a:hover {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 40px;
 }
 
@@ -482,6 +482,10 @@ footer {
   text-align: center;
   font-size: 14px;
 }
+
+/* =====================
+   RESPONSIVE / MOBILE
+   ===================== */
 
 /* Tablet: 768px and below */
 @media (max-width: 768px) {
